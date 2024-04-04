@@ -1,0 +1,134 @@
+/* Reset default margin and padding */
+@import url("https://fonts.googleapis.com/css?family=Audiowide|Sofia|Trirong|Mooli|Fuzzy Bubbles|Nova Cut");
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+  }
+body{
+  background-image: linear-gradient(-225deg, #5D9FFF 0%, #B8DCFF 48%, #6BBBFF 100%);
+}
+.graphic-design{
+    margin: 35px;
+    border: 2px solid black;
+    text-align: center;
+}
+.graphic-design h1{
+    font-family:"Fuzzy Bubbles",Nova Cut;
+}
+  /* Style for the image container */
+  .image-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1000px;
+    margin: 20px auto;
+  }
+  
+  /* Style for individual image boxes */
+  .image-box {
+    width: calc(33.33% - 20px); /* Adjust the width for different screen sizes */
+    padding: 20px;
+    margin: 10px;
+    text-align: center;
+    border: 3px solid black;
+    border-radius: 8px;
+  }
+  
+  /* Style for the image inside the box */
+  .image-box img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 6px;
+  }
+  
+  /* Style for title and description */
+  .image-box h3 {
+    margin-top: 10px;
+  }
+  
+  .image-box p {
+    color: #555;
+    font-size: 14px;
+    line-height: 1.4;
+  }
+  .video-box{
+    width: calc(33.33% - 20px); 
+    border: 3px solid black;
+    padding: 20px;
+    margin: 10px;
+    border-radius: 6px;
+  }
+  .video-box video{
+    max-width: 100%;
+    height: auto;
+    border-radius: 3px;
+    
+  }
+  
+  /* Media query for responsiveness */
+  @media (max-width: 768px) {
+    .image-box {
+      width: calc(50% - 20px); /* Adjust for smaller screens */
+    }
+  }
+  
+  @media (max-width: 480px) {
+    .image-box {
+      width: calc(100% - 20px); /* Adjust for even smaller screens */
+    }
+  }
+
+  .Figma-designs{
+    margin: 35px;
+    border: 2px solid black;
+    text-align: center;
+}
+.Figma-designs h1{
+    font-family:"Fuzzy Bubbles",Nova Cut;
+}
+.Figma-designs p{
+  font-weight: 300;
+  font-style: italic;
+  color: rgb(51, 32, 32);
+  font-size: 15px;
+}
+.image-box-web{
+  border: 2px solid black;
+  padding: 20px;
+  margin: 10px;
+}
+.Web-designs{
+  margin: 35px;
+  border: 2px solid black;
+  text-align: center;
+ 
+}
+.Web-designs h1{
+  font-family:"Fuzzy Bubbles",Nova Cut;
+}
+
+.Web-designs img{
+  max-width: 100%;
+  height: auto;
+  border-radius: 6px;
+}
+.back a{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 15px;
+  text-decoration: none;
+}
+.back p{
+  padding: 5px;
+  border: 1px solid black;
+  border-radius: 5px;
+  color: black;
+}
+.back i{
+  padding-left: 2px;
+  padding-right: 2px;
+}
+ .back p:hover{
+    color: rgb(255, 255, 255);
+  }
