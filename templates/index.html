@@ -1,0 +1,565 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Akshay Poojary | Full Stack Developer</title>
+    <meta name="description"
+        content="Full Stack Developer specializing in SAP UI5, FastAPI, React, and enterprise application development.">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&family=JetBrains+Mono:wght@400;500;600&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+    <link rel="stylesheet" href="/static/css/style.css">
+</head>
+
+<body>
+    <canvas id="particleCanvas"></canvas>
+
+    <div class="loading-screen" id="loadingScreen">
+        <div class="loader">
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <div class="loader-ring"></div>
+            <span class="loader-text">Loading Portfolio</span>
+        </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="nav-logo">
+                <span class="logo-icon"><i class="fas fa-code"></i></span>
+                <span class="logo-name" id="navName">Akshay</span>
+                <span class="logo-tag">.dev</span>
+            </a>
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#hero" class="nav-link active" data-section="hero">Home</a></li>
+                <li><a href="#about" class="nav-link" data-section="about">About</a></li>
+                <li><a href="#skills" class="nav-link" data-section="skills">Skills</a></li>
+                <li><a href="#experience" class="nav-link" data-section="experience">Experience</a></li>
+                <li><a href="#projects" class="nav-link" data-section="projects">Projects</a></li>
+                <li><a href="#certificates" class="nav-link" data-section="certificates">Certificates</a></li>
+                <li><a href="#videos" class="nav-link" data-section="videos">Demos</a></li>
+                <li><a href="#contact" class="nav-link" data-section="contact">Contact</a></li>
+            </ul>
+            <div class="nav-actions">
+                <button class="theme-toggle" id="themeToggle" title="Toggle theme">
+                    <i class="fas fa-sun"></i>
+                </button>
+                <button class="resume-btn" id="downloadResumeNav">
+                    <i class="fas fa-download"></i>
+                    <span>Resume</span>
+                </button>
+                <button class="hamburger" id="hamburger">
+                    <span></span>
+                    <span></span>
+                    <span></span>
+                </button>
+            </div>
+        </div>
+    </nav>
+
+    <div class="mobile-menu" id="mobileMenu">
+        <ul class="mobile-nav-links">
+            <li><a href="#hero" class="mobile-link">Home</a></li>
+            <li><a href="#about" class="mobile-link">About</a></li>
+            <li><a href="#skills" class="mobile-link">Skills</a></li>
+            <li><a href="#experience" class="mobile-link">Experience</a></li>
+            <li><a href="#projects" class="mobile-link">Projects</a></li>
+            <li><a href="#certificates" class="mobile-link">Certificates</a></li>
+            <li><a href="#videos" class="mobile-link">Demos</a></li>
+            <li><a href="#contact" class="mobile-link">Contact</a></li>
+        </ul>
+    </div>
+
+    <section class="hero" id="hero">
+        <div class="hero-inner">
+            <div class="hero-content">
+                <div class="hero-badge" id="availabilityBadge">
+                    <span class="pulse-dot"></span>
+                    <span>Open to Opportunities</span>
+                </div>
+                <h1 class="hero-title">
+                    <span class="greeting">Hello, I'm</span>
+                    <span class="name-line" id="heroName">Akshay Poojary</span>
+                    <span class="role-line">
+                        <span class="typed-text" id="typedText"></span>
+                        <span class="cursor-blink">|</span>
+                    </span>
+                </h1>
+                <p class="hero-description" id="heroBio">
+                    Full Stack Developer with 1+ years of experience building enterprise SAP applications and modern
+                    open-source solutions across frontend, backend, cloud, and AI-integrated systems.
+                </p>
+                <div class="hero-actions">
+                    <a href="#projects" class="btn btn-primary">
+                        <span>View My Work</span>
+                        <i class="fas fa-arrow-right"></i>
+                    </a>
+                    <a href="#contact" class="btn btn-outline">
+                        <span>Get In Touch</span>
+                        <i class="fas fa-envelope"></i>
+                    </a>
+                </div>
+                <div class="hero-stats" id="heroStats">
+                    <div class="stat-item">
+                        <span class="stat-number" id="statProjects">4</span>
+                        <span class="stat-label">Projects</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="statCerts">8</span>
+                        <span class="stat-label">Certificates</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number" id="statYears">1+</span>
+                        <span class="stat-label">Years Exp.</span>
+                    </div>
+                </div>
+            </div>
+            <div class="hero-visual">
+                <div class="hero-image-wrapper">
+                    <div class="avatar-ring"></div>
+                    <div class="avatar-orbit">
+                        <div class="tech-orbit-icon t1" title="Python"><i class="fab fa-python"></i></div>
+                        <div class="tech-orbit-icon t2" title="React"><i class="fab fa-react"></i></div>
+                        <div class="tech-orbit-icon t3" title="Docker"><i class="fab fa-docker"></i></div>
+                        <div class="tech-orbit-icon t4" title="Node.js"><i class="fab fa-node-js"></i></div>
+                        <div class="tech-orbit-icon t5" title="JavaScript"><i class="fab fa-js-square"></i></div>
+                        <div class="tech-orbit-icon t6" title="Database"><i class="fas fa-database"></i></div>
+                        <div class="tech-orbit-icon t7" title="Git"><i class="fab fa-git-alt"></i></div>
+                        <div class="tech-orbit-icon t8" title="AWS Cloud"><i class="fab fa-aws"></i></div>
+                    </div>
+                    <div class="avatar-orbit avatar-orbit-inner">
+                        <div class="tech-orbit-icon-sm ts1" title="SAP"><i class="fas fa-cube"></i></div>
+                        <div class="tech-orbit-icon-sm ts2" title="AI"><i class="fas fa-brain"></i></div>
+                        <div class="tech-orbit-icon-sm ts3" title="API"><i class="fas fa-plug"></i></div>
+                        <div class="tech-orbit-icon-sm ts4" title="Security"><i class="fas fa-shield-alt"></i></div>
+                    </div>
+                    <img src="" alt="Akshay Poojary" class="hero-avatar" id="heroAvatar" style="display:none;">
+                    <div class="avatar-placeholder" id="avatarPlaceholder">
+                        <i class="fas fa-user-astronaut"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="scroll-indicator">
+            <div class="mouse">
+                <div class="mouse-wheel"></div>
+            </div>
+            <span>Scroll</span>
+        </div>
+    </section>
+
+    <section class="section about" id="about">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">about</span>
+                <h2 class="section-title">About Me</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p id="aboutBio" class="about-description">
+                        Akshay is a full stack developer with 1+ years of hands-on experience building both
+                        client-facing and internal products across SAP and open-source ecosystems. He has worked on
+                        enterprise SAP applications, AI-enabled platforms, modern web interfaces, and scalable backend
+                        systems. He enjoys solving real business problems through clean architecture, practical
+                        engineering, and continuous learning.
+                    </p>
+                    <div class="about-details">
+                        <div class="detail-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span id="aboutLocation">Bengaluru, India</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-briefcase"></i>
+                            <span id="aboutTitle">Full Stack Developer | SAP UI5 & FastAPI Engineer</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-phone"></i>
+                            <a href="tel:+919008052395" style="color:inherit;">+91 9008052395</a>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-envelope"></i>
+                            <a href="mailto:apooj56@gmail.com" style="color:inherit;">apooj56@gmail.com</a>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-clock"></i>
+                            <span>Notice Period: 3 Months</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-globe"></i>
+                            <span>English, Hindi, Kannada (Fluent) | German (Learning)</span>
+                        </div>
+                    </div>
+                    <div class="social-links" id="socialLinks">
+                        <a href="https://www.linkedin.com/in/akshay-poojary-736080224/" target="_blank"
+                            class="social-link" title="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="https://github.com/akshau12a" target="_blank" class="social-link" title="GitHub"><i
+                                class="fab fa-github"></i></a>
+                        <a href="https://leetcode.com/u/apooj002/" target="_blank" class="social-link"
+                            title="LeetCode"><i class="fas fa-code"></i></a>
+                        <a href="mailto:apooj56@gmail.com" class="social-link" title="Email"><i
+                                class="fas fa-envelope"></i></a>
+                    </div>
+                </div>
+                <div class="about-cards">
+                    <div class="info-card">
+                        <div class="card-icon"><i class="fas fa-layer-group"></i></div>
+                        <div>
+                            <h3>Full Stack in Two Worlds</h3>
+                            <p>Proficient in both enterprise SAP technologies (UI5, BTP, CAP) and open-source full stack
+                                development (FastAPI, React, Next.js, PostgreSQL).</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon"><i class="fas fa-brain"></i></div>
+                        <div>
+                            <h3>AI-Integrated Engineering</h3>
+                            <p>Built production AI systems using Gemini AI, vector embeddings, and semantic search for
+                                intelligent candidate matching and resume parsing.</p>
+                        </div>
+                    </div>
+                    <div class="info-card">
+                        <div class="card-icon"><i class="fas fa-shield-alt"></i></div>
+                        <div>
+                            <h3>Security & Architecture</h3>
+                            <p>Deep experience with JWT, OAuth2, RSA encryption, RBAC, clean architecture, and
+                                cloud-native deployment using Docker and SAP BTP.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="section skills" id="skills">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">skills</span>
+                <h2 class="section-title">Technical Skills</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="skills-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="sap">SAP</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="devops">DevOps</button>
+                <button class="filter-btn" data-filter="database">Database</button>
+                <button class="filter-btn" data-filter="ai">AI/ML</button>
+            </div>
+            <div class="skills-grid" id="skillsGrid"></div>
+        </div>
+    </section>
+
+    <section class="section experience" id="experience">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">experience</span>
+                <h2 class="section-title">Work Experience</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="timeline" id="timeline"></div>
+        </div>
+    </section>
+
+    <section class="section projects" id="projects">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">projects</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="projects-grid" id="projectsGrid"></div>
+            <div class="empty-state" id="projectsEmpty" style="display:none;">
+                <i class="fas fa-folder-open"></i>
+                <p>Projects will appear here soon.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section certificates" id="certificates">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">certifications</span>
+                <h2 class="section-title">Certifications</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="certificates-grid" id="certificatesGrid"></div>
+            <div class="empty-state" id="certsEmpty" style="display:none;">
+                <i class="fas fa-certificate"></i>
+                <p>Certificates will appear here soon.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section videos" id="videos">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">demos</span>
+                <h2 class="section-title">Work Demos</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="videos-grid" id="videosGrid"></div>
+            <div class="empty-state" id="videosEmpty" style="display:none;">
+                <i class="fas fa-video"></i>
+                <p>Demo videos will appear here soon.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="section contact" id="contact">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-tag">contact</span>
+                <h2 class="section-title">Get In Touch</h2>
+                <div class="title-underline"></div>
+            </div>
+            <div class="contact-grid">
+                <div class="contact-info">
+                    <h3>Let's work together</h3>
+                    <p>Open to full-time roles, collaborations, and consulting opportunities. Feel free to reach out for
+                        any inquiry.</p>
+                    <div class="contact-methods">
+                        <div class="contact-method">
+                            <div class="method-icon"><i class="fas fa-envelope"></i></div>
+                            <div>
+                                <h4>Email</h4>
+                                <p><a href="mailto:apooj56@gmail.com"
+                                        style="color:var(--accent-primary);">apooj56@gmail.com</a></p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon"><i class="fas fa-phone"></i></div>
+                            <div>
+                                <h4>Phone</h4>
+                                <p><a href="tel:+919008052395" style="color:var(--accent-primary);">+91 9008052395</a>
+                                </p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon"><i class="fas fa-map-marker-alt"></i></div>
+                            <div>
+                                <h4>Location</h4>
+                                <p>Bengaluru, India</p>
+                            </div>
+                        </div>
+                        <div class="contact-method">
+                            <div class="method-icon"><i class="fas fa-clock"></i></div>
+                            <div>
+                                <h4>Notice Period</h4>
+                                <p>3 Months</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="resume-download-section">
+                        <h4><i class="fas fa-file-pdf"></i> Download Resume</h4>
+                        <p>Get Akshay's latest resume with full project details and skill overview.</p>
+                        <button class="btn btn-primary" id="downloadResume">
+                            <i class="fas fa-download"></i>
+                            <span>Download CV</span>
+                        </button>
+                    </div>
+                </div>
+                <div class="contact-form-wrapper">
+                    <form class="contact-form" id="contactForm">
+                        <div class="form-group">
+                            <label>Your Name</label>
+                            <input type="text" id="contactName" name="name" required placeholder="John Doe">
+                        </div>
+                        <div class="form-group">
+                            <label>Your Email</label>
+                            <input type="email" id="contactEmailInput" name="email" required
+                                placeholder="john@company.com">
+                        </div>
+                        <div class="form-group">
+                            <label>Request Type</label>
+                            <select id="requestType" name="request_type">
+                                <option value="general">General Inquiry</option>
+                                <option value="interview_request">Interview Request</option>
+                                <option value="salary_request">Salary Discussion</option>
+                                <option value="collaboration">Collaboration</option>
+                                <option value="freelance">Freelance Project</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label>Subject</label>
+                            <input type="text" id="contactSubject" name="subject" required
+                                placeholder="What is this regarding?">
+                        </div>
+                        <div class="form-group">
+                            <label>Message</label>
+                            <textarea id="contactMessage" name="message" rows="5" required
+                                placeholder="Write your message here..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-full" id="sendMessageBtn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        <div class="form-status" id="formStatus"></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-logo">
+                    <span class="logo-icon"><i class="fas fa-code"></i></span>
+                    <span id="footerName">Akshay</span>
+                    <span class="logo-tag">.dev</span>
+                </div>
+                <div class="footer-social">
+                    <a href="https://www.linkedin.com/in/akshay-poojary-736080224/" target="_blank"
+                        class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    <a href="https://github.com/akshau12a" target="_blank" class="social-link"><i
+                            class="fab fa-github"></i></a>
+                    <a href="https://leetcode.com/u/apooj002/" target="_blank" class="social-link"><i
+                            class="fas fa-code"></i></a>
+                </div>
+                <p class="footer-text">Designed & Built by Akshay Poojary &bull; <span id="currentYear"></span></p>
+                <div class="visitor-count">
+                    <i class="fas fa-eye"></i>
+                    <span id="visitorCount">—</span>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <div class="lightbox" id="lightbox">
+        <button class="lightbox-close" id="lightboxClose"><i class="fas fa-times"></i></button>
+        <img src="" alt="" class="lightbox-image" id="lightboxImage">
+    </div>
+
+    <div class="video-modal" id="videoModal">
+        <div class="video-modal-content">
+            <button class="modal-close" id="videoModalClose"><i class="fas fa-times"></i></button>
+            <div class="video-container" id="videoContainer"></div>
+        </div>
+    </div>
+
+    <div class="pdf-modal" id="pdfModal">
+        <div class="pdf-modal-content">
+            <div class="pdf-modal-header">
+                <h3 id="pdfModalTitle">Certificate</h3>
+                <button class="pdf-close-btn" id="pdfModalClose"><i class="fas fa-times"></i></button>
+            </div>
+            <iframe class="pdf-iframe" id="pdfIframe" src=""></iframe>
+        </div>
+    </div>
+
+    <div class="chatbot-wrapper" id="chatbotWrapper">
+        <button class="chatbot-toggle" id="chatbotToggle">
+            <i class="fas fa-comment-dots" id="chatIcon"></i>
+            <i class="fas fa-times" id="chatCloseIcon" style="display:none;"></i>
+            <span class="chat-notification" id="chatNotification" style="display:none;">1</span>
+        </button>
+        <div class="chatbot-window" id="chatbotWindow">
+            <div class="chat-header">
+                <div class="chat-header-info">
+                    <div class="chat-avatar">
+                        <i class="fas fa-robot"></i>
+                        <span class="online-dot"></span>
+                    </div>
+                    <div>
+                        <h4>Akshay's Assistant</h4>
+                        <span class="chat-status">Ask me anything about Akshay</span>
+                    </div>
+                </div>
+                <button class="chat-close-btn" onclick="toggleChat()"><i class="fas fa-times"></i></button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <div class="chat-message bot">
+                    <div class="msg-avatar"><i class="fas fa-robot"></i></div>
+                    <div class="msg-bubble">
+                        <p>Hi there! I'm Akshay's assistant.</p>
+                        <p>Ask me anything about his skills, experience, projects, or how to reach him.</p>
+                    </div>
+                </div>
+                <div class="chat-suggestions">
+                    <button class="suggestion-btn"
+                        onclick="sendSuggestion('What are Akshay\'s technical skills?')">Skills</button>
+                    <button class="suggestion-btn"
+                        onclick="sendSuggestion('Tell me about Akshay\'s projects')">Projects</button>
+                    <button class="suggestion-btn"
+                        onclick="sendSuggestion('What is Akshay\'s salary expectation?')">Salary</button>
+                    <button class="suggestion-btn"
+                        onclick="sendSuggestion('What is Akshay\'s notice period?')">Availability</button>
+                    <button class="suggestion-btn"
+                        onclick="sendSuggestion('Tell me about Akshay\'s SAP experience')">SAP Skills</button>
+                </div>
+            </div>
+            <div class="chat-input-wrapper">
+                <input type="text" class="chat-input" id="chatInput" placeholder="Ask about Akshay..."
+                    onkeypress="handleChatKeyPress(event)">
+                <button class="chat-send-btn" id="chatSendBtn" onclick="sendChatMessage()">
+                    <i class="fas fa-paper-plane"></i>
+                </button>
+            </div>
+            <div class="chat-footer-note">Personal AI Assistant • Trained on Akshay's Journey</div>
+        </div>
+    </div>
+
+    <div class="toast-container" id="toastContainer"></div>
+
+    <div class="welcome-overlay" id="welcomeOverlay">
+        <div class="welcome-content">
+            <div class="welcome-badge">
+                <span class="pulse-dot"></span>
+                <span>Welcome to my Portfolio</span>
+            </div>
+            <h1 class="welcome-title">
+                Glad you're here <span class="wave">👋</span>
+            </h1>
+            <p class="welcome-subtitle">
+                I know your time is valuable, and scrolling through every line isn't fun.<br>
+                So I built <strong>two smart ways</strong> to know me — quick, honest, and human.
+            </p>
+            <p class="welcome-question">Which one feels right for you?</p>
+
+            <div class="welcome-choices">
+                <button class="choice-card" onclick="openChatFromWelcome()">
+                    <div class="choice-icon"><i class="fas fa-comments"></i></div>
+                    <h3>Have a Conversation</h3>
+                    <p>Ask me anything — my journey, skills, projects, experience, or what I'm looking for next. I'll respond instantly.</p>
+                    <span class="choice-cta">Start Chatting <i class="fas fa-arrow-right"></i></span>
+                    <div class="choice-time"><i class="fas fa-bolt"></i> Instant</div>
+                </button>
+
+                <button class="choice-card featured" onclick="playStory()">
+                    <div class="choice-icon"><i class="fas fa-film"></i></div>
+                    <h3>Watch My Story</h3>
+                    <p>A 60-second cinematic journey through my education, work, projects, and where I'm heading next.</p>
+                    <span class="choice-cta">Play Story <i class="fas fa-play"></i></span>
+                    <div class="choice-time"><i class="fas fa-clock"></i> 60 sec</div>
+                    <div class="featured-badge">Recommended</div>
+                </button>
+            </div>
+
+            <button class="skip-btn" onclick="skipWelcome()">
+                <i class="fas fa-compass"></i> Explore on my own
+            </button>
+        </div>
+    </div>
+
+    <div class="story-overlay" id="storyOverlay">
+        <div class="story-progress">
+            <div class="story-progress-bar" id="storyProgressBar"></div>
+        </div>
+        <button class="story-close" onclick="closeStory()"><i class="fas fa-times"></i></button>
+        <div class="story-scene" id="storyScene"></div>
+        <div class="story-controls">
+            <button class="story-btn" onclick="skipStory()">Skip Story <i class="fas fa-forward"></i></button>
+        </div>
+    </div>
+
+    <script src="/static/js/particles.js"></script>
+    <script src="/static/js/main.js"></script>
+</body>
+
+</html>
